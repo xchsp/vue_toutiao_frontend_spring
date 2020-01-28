@@ -4,8 +4,8 @@
       <div class="meta">
         <img alt class="avatar" src="/static/imgs/default.png" />
         <div class="info">
-          <div class="name" v-if="commentItem.user">{{commentItem.user.nickname}}</div>
-          <span class="time">{{commentItem.created}}</span>
+          <div class="name" v-if="commentItem.user">{{commentItem.user_nickname}}</div>
+          <span class="time">{{commentItem.comment_time|dataFormat}}</span>
         </div>
         <div @click="reply" class="btnApply">回复</div>
       </div>
@@ -16,7 +16,7 @@
         @reply="reply"
         v-if="commentItem.parent"
       />
-      <div class="content">{{commentItem.content}}</div>
+      <div class="content">{{commentItem.comment_content}}</div>
     </div>
   </div>
 </template>
@@ -32,6 +32,16 @@ export default {
     return {
       // parentLength: this.countParent(0, this.commentItem)
       parentLength:3
+    }
+  },
+  filters: {
+    dataFormat: (data, spe) => {
+      data = new Date(data)
+      spe = spe || '/'
+      var nn = data.getFullYear()
+      var mm = data.getMonth() + 1
+      var dd = data.getDate()
+      return nn + spe + mm + spe + dd
     }
   },
   methods: {
