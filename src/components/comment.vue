@@ -4,7 +4,7 @@
       <div class="meta">
         <img alt class="avatar" src="/static/imgs/default.png" />
         <div class="info">
-          <div class="name" v-if="commentItem.user">{{commentItem.user_nickname}}</div>
+          <div class="name" v-if="commentItem.user_nickname">{{commentItem.user_nickname}}</div>
           <span class="time">{{commentItem.comment_time|dataFormat}}</span>
         </div>
         <div @click="reply" class="btnApply">回复</div>
