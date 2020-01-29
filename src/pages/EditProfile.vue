@@ -75,7 +75,7 @@ export default {
             this.$axios.defaults.baseURL.replace("/api","") + this.profile.picPath
           console.log(this.profile.picPath)
         }
-        this.profile.gender = this.profile.gender == 0 ? '女' : '男'
+        this.profile.sex = this.profile.sex == 0 ? '女' : '男'
       })
     },
     editProfile(newData) {
