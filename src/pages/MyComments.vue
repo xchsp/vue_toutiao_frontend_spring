@@ -2,13 +2,13 @@
   <div>
     <headerMiddle title="我的跟帖"></headerMiddle>
     <div :key="index" class="item" v-for="(item,index) of commentsList">
-      <div class="date">{{item.created}}</div>
+      <div class="date">{{item.comment_time|dataFormat}}</div>
       <div class="parent" v-if="item.parent">
         <div class="name">回复:{{item.parent.user.nickname}}</div>
         <div class="parentContent">{{item.parent.content}}</div>
       </div>
-      <div class="mainContent">{{item.content}}</div>
-      <div class="postOrigin">原文:{{item.post.title}}</div>
+      <div class="mainContent">{{item.comment_content}}</div>
+      <div class="postOrigin">原文:{{item.title}}</div>
     </div>
   </div>
 </template>
@@ -22,6 +22,17 @@ export default {
   data() {
     return {
       commentsList: []
+    }
+
+  },
+  filters: {
+    dataFormat: (data, spe) => {
+      data = new Date(data)
+      spe = spe || '/'
+      var nn = data.getFullYear()
+      var mm = data.getMonth() + 1
+      var dd = data.getDate()
+      return nn + spe + mm + spe + dd
     }
   },
   methods: {
