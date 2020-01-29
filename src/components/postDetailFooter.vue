@@ -77,11 +77,11 @@ export default {
       }).then(res => {
         console.log(res)
         const { message } = res.data
-        if (message == '收藏成功') {
-          // this.post.has_star = true
-        } else if (message == '取消成功') {
-          // this.post.has_star = false
-        }
+        // if (message == '收藏成功') {
+        //   // this.post.has_star = true
+        // } else if (message == '取消成功') {
+        //   // this.post.has_star = false
+        // }
         this.$emit('starChanged')
         console.log(message)
       })
