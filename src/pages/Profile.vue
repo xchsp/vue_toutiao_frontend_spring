@@ -2,10 +2,10 @@
   <div>
     <headerMiddle title="个人中心" />
     <div class="profile">
-      <img :src="profile.head_img" @click="$router.push('/editProfile')" alt class="avatar" />
+      <img :src="profile.picPath" @click="$router.push('/editProfile')" alt class="avatar" />
       <div class="profile-middle">
         <div>
-          <span class="iconfont iconxingbienan" v-if="profile.gender ==1"></span>
+          <span class="iconfont iconxingbienan" v-if="profile.sex ==1"></span>
           <span class="iconfont iconxingbienv" v-else></span>
           {{profile.nickname}}
         </div>
@@ -42,14 +42,16 @@ export default {
         url: '/user/' + localStorage.getItem('user_id'),
         method: 'GET'
       }).then(res => {
-        this.profile = res.data.data
-        if (!this.profile.head_img) {
-          // this.profile.head_img = '/static/imgs/default.png'
-          this.profile.head_img =
+        this.profile = res.data
+        console.log(this.profile.picPath)
+        if (!this.profile.picPath) {
+          // this.profile.picPath = '/static/imgs/default.png'
+          this.profile.picPath =
             'https://p3.pstatp.com/list/190x124/pgc-image/Rft0hGGCLk6YgJ'
         } else {
-          this.profile.head_img =
-            this.$axios.defaults.baseURL + this.profile.head_img
+          this.profile.picPath =
+            this.$axios.defaults.baseURL.replace("/api","") + this.profile.picPath
+            console.log(this.profile.picPath)
         }
       })
     }
@@ -69,7 +71,8 @@ export default {
 }
 .avatar {
   margin-left: 5.556vw;
-  width: 19.444vw;
+  width: 70 / 360 * 100vw;
+  height: 70 / 360 * 100vw;
   border-radius: 50%;
 }
 .profile-middle {
