@@ -2,7 +2,7 @@
   <div>
     <headerMiddle title="我的关注"></headerMiddle>
     <div :key="index" class="item" v-for="(item,index) of fllowList">
-      <img :src="item.head_img" alt class="avatar" />
+      <img :src="item.picPath" alt class="avatar" />
       <div class="itemMiddle">
         <div class="name">{{item.nickname}}</div>
         <div class="time">2019-10-10</div>
@@ -29,20 +29,20 @@ export default {
         url: '/user_follows/',
         method: 'GET'
       }).then(res => {
-        this.fllowList = res.data.data
+        this.fllowList = res.data
         console.log(this.fllowList)
         this.fllowList.forEach(element => {
-          if (!element.head_img) {
-            element.head_img = '/static/imgs/default.png'
+          if (!element.picPath) {
+            element.picPath = '/static/imgs/default.png'
           } else {
-            element.head_img = this.$axios.defaults.baseURL + element.head_img
+            element.picPath = this.$axios.defaults.baseURL.replace("/api","") + element.picPath
           }
         })
       })
     },
     cancelFllow(id) {
       this.$axios({
-        url: '/user_unfollow/' + id,
+        url: '/user_follows/' + id,
         method: 'GET'
       }).then(res => {
         console.log(res)

@@ -9,13 +9,14 @@
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
 export default {
   props: ['post'],
   methods: {
     follow() {
+      console.log(this.post)
       this.$axios({
-        url: '/user_follows/' + this.post.user.id,
+        url: '/user_follows/' + this.post.userid,
         method: 'GET'
       }).then(res => {
         console.log(res)
@@ -23,11 +24,14 @@ export default {
         if (message == '关注成功') {
           this.post.has_follow = true
         }
+        else{
+          this.$toast.fail(message)
+        }
       })
     },
     unfollow() {
       this.$axios({
-        url: '/user_unfollow/' + this.post.user.id,
+        url: '/user_follows/' + this.post.userid,
         method: 'GET'
       }).then(res => {
         console.log(res)

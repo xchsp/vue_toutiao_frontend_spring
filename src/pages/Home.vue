@@ -172,6 +172,7 @@ export default {
       // 异步更新数据
       // 加载状态结束
       // 每当拉到底部当前 tab 的 页码 +1 发送请求获取数据
+      console.log('loadMorePostloadMorePostloadMorePost')
       console.log(this.tabList[this.activeTab].currentPage)
       setTimeout(() => {
         this.tabList[this.activeTab].currentPage += 1
