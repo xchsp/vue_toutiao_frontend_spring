@@ -87,7 +87,8 @@ export default {
         }
       }).then(res => {
         // const { data } = res.data
-        this.resultList = res.data
+        this.resultList = res.data.topics
+
         if (this.historyList.indexOf(this.searchStr) < 0) {
           this.historyList.push(this.searchStr)
         }
