@@ -9,9 +9,9 @@
     <div class="inputName">
       <authInput
         @input="setUserName"
-        err_message="请输入正确的手机号"
+        err_message="请输入正确的手机号s"
         placeholder="用户名/手机号"
-        rule="^\d{5,10}$"
+        rule="^\d{5,11}$"
         type="text"
       ></authInput>
     </div>
@@ -45,8 +45,8 @@ import authBtn from '@/pages/auth/components/authBtn'
 export default {
   data() {
     return {
-      username: '',
-      password: '',
+      email: '',
+      passwd: '',
       nickname: ''
     }
   },
@@ -56,29 +56,32 @@ export default {
   },
   methods: {
     setUserName(name) {
-      this.username = name
+      this.email = name
     },
     setNickName(name) {
       this.nickname = name
     },
     setPassword(password) {
-      this.password = password
+      this.passwd = password
     },
     sendRegister() {
       this.$axios({
-        url: '/register',
+        url: 'http://127.0.0.1:8080/register',
         method: 'POST',
         data: {
-          username: this.username,
-          email: this.nickname,
-          password: this.password
+          email: this.email,
+          nickname: this.nickname,
+          passwd: this.passwd
         }
       }).then(res => {
         console.log(res)
         if (res.data.statusCode && res.data.statusCode == 400) {
           this.$toast.fail(res.data.message)
         } else {
-          this.$toast.success(res.data.message)
+          if(res.data.status == 0)
+            this.$toast.success(res.data.message)
+          else
+            this.$toast.fail(res.data.message)
         }
       })
     }
