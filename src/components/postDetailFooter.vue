@@ -90,77 +90,77 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  .disable {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2.778vw 2.778vw 2.778vw 0;
-    .iconfont {
-      font-size: 6.389vw;
-    }
-    input {
-      height: 8.611vw;
-      line-height: 8.611vw;
-      font-size: 3.889vw;
-      border: none;
-      outline: none;
-      border-radius: 4.444vw;
-      padding: 0 4.444vw;
-      background-color: #d7d7d7;
-      color: #848484;
-    }
-    .comment {
-      position: relative;
-      .commentNumber {
-        position: absolute;
-        left: 0.556vw;
-        top: -2.222vw;
-        height: 4.444vw;
-        line-height: 4.444vw;
-        box-sizing: border-box;
-        font-size: 3.333vw;
-        color: #fff;
-        background: #f00;
-        border-radius: 2.222vw;
-        padding: 0 2.222vw;
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    .disable {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10/@vv 10/@vv 10/@vv 0;
+      .iconfont {
+        font-size: 23/@vv;
+      }
+      input {
+        height: 31/@vv;
+        line-height: 31/@vv;
+        font-size: 14/@vv;
+        border: none;
+        outline: none;
+        border-radius: 16/@vv;
+        padding: 0 16/@vv;
+        background-color: #d7d7d7;
+        color: #848484;
+      }
+      .comment {
+        position: relative;
+        .commentNumber {
+          position: absolute;
+          left: 2/@vv;
+          top: -8/@vv;
+          height: 16/@vv;
+          line-height: 16/@vv;
+          box-sizing: border-box;
+          font-size: 12/@vv;
+          color: #fff;
+          background: #f00;
+          border-radius: 8/@vv;
+          padding: 0 8/@vv;
+        }
       }
     }
-  }
-  .enable {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 2.778vw 2.778vw 2.778vw 0;
-    textarea {
-      width: 75vw;
-      padding: 4.444vw 0;
-      box-sizing: border-box;
-      border: none;
-      outline: none;
-      border-radius: 2.222vw;
-      color: #666;
-      background-color: #d7d7d7;
-      resize: none;
+    .enable {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      padding: 10/@vv 10/@vv 10/@vv 0;
+      textarea {
+        width: 270/@vv;
+        padding: 16/@vv 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        border-radius: 8/@vv;
+        color: #666;
+        background-color: #d7d7d7;
+        resize: none;
+      }
+      .send {
+        padding: 0 15/@vv;
+        height: 26/@vv;
+        line-height: 26/@vv;
+        text-align: center;
+        background-color: #f00;
+        color: #fff;
+        border-radius: 16/@vv;
+        border: 1px solid #f00;
+        font-size: 14px;
+      }
     }
-    .send {
-      padding: 0 4.167vw;
-      height: 7.222vw;
-      line-height: 7.222vw;
-      text-align: center;
-      background-color: #f00;
-      color: #fff;
-      border-radius: 4.444vw;
-      border: 1px solid #f00;
-      font-size: 14px;
+    .red {
+      color: #f00;
     }
   }
-  .red {
-    color: #f00;
-  }
-}
 </style>

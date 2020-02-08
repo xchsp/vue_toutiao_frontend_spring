@@ -53,26 +53,26 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.item {
-  display: flex;
-  flex-direction: column;
-  padding: 4.444vw;
-  border-bottom: 1px solid #eee;
-}
-.date {
-  color: #888;
-  padding: 2.778vw 0;
-}
-.parent {
-  padding: 2.778vw;
-  background-color: #eee;
-  .name {
-    padding-bottom: 2.778vw;
+  .item {
+    display: flex;
+    flex-direction: column;
+    padding: 16/@vv;
+    border-bottom: 1px solid #eee;
   }
-  .parentContent {
+  .date {
+    color: #888;
+    padding: 8/@vv 0;
   }
-}
-.mainContent {
-  padding: 2.778vw 0;
-}
+  .parent {
+    padding: 8/@vv;
+    background-color: #eee;
+    .name {
+      padding-bottom: 8/@vv;
+    }
+    .parentContent {
+    }
+  }
+  .mainContent {
+    padding: 8/@vv 0;
+  }
 </style>

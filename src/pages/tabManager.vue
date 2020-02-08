@@ -92,22 +92,22 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.Active,
-.Deactive {
-  padding: 2.778vw;
-  height: 40vh;
-  .title {
-    font-weight: normal;
-    margin-bottom: 2.778vw;
-    font-size: 5.556vw;
+  .Active,
+  .Deactive {
+    padding: 8/@vv;
+    height: 40vh;
+    .title {
+      font-weight: normal;
+      margin-bottom: 8/@vv;
+      font-size: 20/@vv;
+    }
+    .tab {
+      width: 45/@vv;
+      text-align: center;
+      float: left;
+      margin: 4/@vv 8/@vv;
+      background-color: #f6f6f6;
+      border: 1px solid #eee;
+    }
   }
-  .tab {
-    width: 12.5vw;
-    text-align: center;
-    float: left;
-    margin: 1.389vw 2.778vw;
-    background-color: #f6f6f6;
-    border: 1px solid #eee;
-  }
-}
 </style>

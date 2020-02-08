@@ -39,24 +39,24 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.floorWrapper {
-  border: 1px solid #eee;
-  background-color: #f3f3f3;
-  padding: 2.778vw;
-}
-.meta {
-  display: flex;
-  justify-content: space-between;
-  .info {
-    font-size: 12px;
-    color: #888;
+  .floorWrapper {
+    border: 1px solid #eee;
+    background-color: #f3f3f3;
+    padding: 10/@vv;
   }
-  .btnApply {
-    font-size: 12px;
-    color: #888;
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    .info {
+      font-size: 12px;
+      color: #888;
+    }
+    .btnApply {
+      font-size: 12px;
+      color: #888;
+    }
   }
-}
-.content {
-  margin-top: 2.778vw;
-}
+  .content {
+    margin-top: 10/@vv;
+  }
 </style>

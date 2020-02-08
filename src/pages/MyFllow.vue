@@ -57,32 +57,32 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5.556vw;
-  border-bottom: 1px solid #eee;
-}
-.avatar {
-  width: 11.111vw;
-  border-radius: 50%;
-}
-.itemMiddle {
-  flex: 1;
-  padding-left: 2.778vw;
-}
-.time {
-  color: #888;
-  font-size: 14px;
-}
-.btnCancel {
-  height: 8.333vw;
-  line-height: 8.333vw;
-  padding: 0 2.778vw;
-  color: #888;
-  font-size: 14px;
-  background-color: #eee;
-  border-radius: 5.556vw;
-}
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20/@vv;
+    border-bottom: 1px solid #eee;
+  }
+  .avatar {
+    width: 40/@vv;
+    border-radius: 50%;
+  }
+  .itemMiddle {
+    flex: 1;
+    padding-left: 8/@vv;
+  }
+  .time {
+    color: #888;
+    font-size: 14px;
+  }
+  .btnCancel {
+    height: 30/@vv;
+    line-height: 30/@vv;
+    padding: 0 8/@vv;
+    color: #888;
+    font-size: 14px;
+    background-color: #eee;
+    border-radius: 20/@vv;
+  }
 </style>

@@ -22,14 +22,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.container {
-  padding-left: 5.556vw;
-}
-.user {
-  display: flex;
-  justify-content: space-between;
-  height: 16.667vw;
-  line-height: 16.667vw;
-  border-bottom: 1px solid #eee;
-}
+  .container {
+    padding-left: 20/@vv;
+  }
+  .user {
+    display: flex;
+    justify-content: space-between;
+    height: 60/@vv;
+    line-height: 60/@vv;
+    border-bottom: 1px solid #eee;
+  }
 </style>

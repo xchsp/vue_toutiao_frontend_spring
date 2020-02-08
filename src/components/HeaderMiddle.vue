@@ -12,19 +12,19 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.header {
-  display: flex;
-  justify-content: space-between;
-  height: 13.889vw;
-  line-height: 13.889vw;
-}
-.iconjiantou2 {
-  padding: 0 2.778vw;
-}
-.title {
-  padding-right: 11.111vw;
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
-}
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 50/@vv;
+    line-height: 50/@vv;
+  }
+  .iconjiantou2 {
+    padding: 0 10/@vv;
+  }
+  .title {
+    padding-right: 40/@vv;
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+  }
 </style>

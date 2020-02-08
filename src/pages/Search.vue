@@ -102,45 +102,45 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.search {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.778vw;
-  .searchText {
-    height: 8.333vw;
-    border-radius: 4.167vw;
-    padding: 0 2.778vw;
-    border: 1px solid #ccc;
-    .searchInput {
-      height: 100%;
-      width: 55.556vw;
-      border: none;
-      outline: none;
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8/@vv;
+    .searchText {
+      height: 30/@vv;
+      border-radius: 15/@vv;
+      padding: 0 8/@vv;
+      border: 1px solid #ccc;
+      .searchInput {
+        height: 100%;
+        width: 200/@vv;
+        border: none;
+        outline: none;
+      }
+    }
+    .btn {
+      padding: 0 4/@vv;
     }
   }
-  .btn {
-    padding: 0 1.111vw;
-  }
-}
 
-.content {
-  .history,
-  .hot {
-    border-bottom: 1px solid #888;
-    height: 55.556vw;
-    padding-top: 4.167vw;
-    font-size: 3.889vw;
-  }
-  .history {
-    .title {
-      margin-bottom: 2.778vw;
+  .content {
+    .history,
+    .hot {
+      border-bottom: 1px solid #888;
+      height: 200/@vv;
+      padding-top: 15/@vv;
+      font-size: 14/@vv;
+    }
+    .history {
+      .title {
+        margin-bottom: 8/@vv;
+      }
+    }
+    .hot {
+      .title {
+        margin-bottom: 8/@vv;
+      }
     }
   }
-  .hot {
-    .title {
-      margin-bottom: 2.778vw;
-    }
-  }
-}
 </style>

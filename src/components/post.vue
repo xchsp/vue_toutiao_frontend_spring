@@ -59,19 +59,43 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.single {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.778vw;
-  border-bottom: 1px solid #eee;
-  .left {
-    flex: 1;
-    height: 20.833vw;
+  .single {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10/@vv;
+    border-bottom: 1px solid #eee;
+    .left {
+      flex: 1;
+      height: 75/@vv;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .info {
+        color: #888;
+        font-size: 14px;
+      }
+    }
+    .imgRight {
+      width: 121/@vv;
+      height: 75/@vv;
+      object-fit: cover;
+    }
+  }
+  .multip {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 10/@vv;
+    border-bottom: 1px solid #eee;
     .title {
+      flex: 1;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
@@ -79,87 +103,63 @@ export default {
     }
     .info {
       color: #888;
-      font-size: 14px;
+      font-size: 14/@vv;
     }
-  }
-  .imgRight {
-    width: 33.611vw;
-    height: 20.833vw;
-    object-fit: cover;
-  }
-}
-.multip {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2.778vw;
-  border-bottom: 1px solid #eee;
-  .title {
-    flex: 1;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-  .info {
-    color: #888;
-    font-size: 3.889vw;
-  }
-  .cover {
-    margin: 2.778vw 0;
-    img {
-      width: 32%;
-      height: 20.833vw;
-      margin-right: 1.111vw;
-      object-fit: cover;
-    }
-  }
-}
-.videoPost {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2.778vw;
-  border-bottom: 1px solid #eee;
-  .title {
-    flex: 1;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-  .info {
-    color: #888;
-    font-size: 3.889vw;
-  }
-  .cover {
-    position: relative;
-    margin: 2.778vw 0;
-    .btnPlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .iconshipin {
-        width: 15.278vw;
-        height: 15.278vw;
-        line-height: 15.278vw;
-        border-radius: 50%;
-        text-align: center;
-        background: #ccc;
-        color: #fff;
-        font-size: 40px;
+    .cover {
+      margin: 10/@vv 0;
+      img {
+        width: 32%;
+        height: 75/@vv;
+        margin-right: 4/@vv;
+        object-fit: cover;
       }
     }
-    img {
-      width: 100%;
-      height: 47.222vw;
-      object-fit: cover;
+  }
+  .videoPost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10/@vv;
+    border-bottom: 1px solid #eee;
+    .title {
+      flex: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    .info {
+      color: #888;
+      font-size: 14/@vv;
+    }
+    .cover {
+      position: relative;
+      margin: 10/@vv 0;
+      .btnPlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .iconshipin {
+          width: 55/@vv;
+          height: 55/@vv;
+          line-height: 55/@vv;
+          border-radius: 50%;
+          text-align: center;
+          background: #ccc;
+          color: #fff;
+          font-size: 40px;
+        }
+      }
+      img {
+        width: 100%;
+        height: 170/@vv;
+        object-fit: cover;
+      }
     }
   }
-}
 </style>

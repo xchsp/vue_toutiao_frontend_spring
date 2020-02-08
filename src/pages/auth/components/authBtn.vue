@@ -14,13 +14,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.btn {
-  width: 69.444vw;
-  height: 13.333vw;
-  line-height: 13.333vw;
-  color: #fff;
-  background-color: #cc3300;
-  border-radius: 6.667vw;
-  text-align: center;
-}
+  .btn {
+    width: 250/@vv;
+    height: 48/@vv;
+    line-height: 48/@vv;
+    color: #fff;
+    background-color: #cc3300;
+    border-radius: 24/@vv;
+    text-align: center;
+  }
 </style>

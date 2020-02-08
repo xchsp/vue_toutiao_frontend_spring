@@ -120,30 +120,30 @@ export default {
 
 <style lang="less" scoped>
 
-.avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  position: relative;
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
 
-  .avatar-img {
-    display: block;
-    width: 100 / 360 * 100vw;
-    height: 100 / 360 * 100vw;
-    border-radius: 50%;
+    .avatar-img {
+      display: block;
+      width: 100/@vv;
+      height: 100/@vv;
+      border-radius: 50%;
+    }
+    // 修改元素的大小
+    /deep/.van-uploader__upload {
+      width: 100/@vv;
+      height: 100/@vv;
+    }
+    /deep/.van-uploader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
   }
-  // 修改元素的大小
-  /deep/.van-uploader__upload {
-    width: 100 / 360 * 100vw;
-    height: 100 / 360 * 100vw;
-  }
-  /deep/.van-uploader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-  }
-}
 </style>

@@ -90,23 +90,23 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.container {
-  padding: 5.556vw;
-}
-.closeBtn {
-  .iconfont {
-    font-size: 7.5vw;
+  .container {
+    padding: 20/@vv;
   }
-}
-.logo {
-  display: flex;
-  justify-content: center;
-  .iconfont {
-    color: #d81e06;
-    font-size: 35vw;
+  .closeBtn {
+    .iconfont {
+      font-size: 27/@vv;
+    }
   }
-}
-.btn {
-  margin: 50px auto 0;
-}
+  .logo {
+    display: flex;
+    justify-content: center;
+    .iconfont {
+      color: #d81e06;
+      font-size: 126/@vv;
+    }
+  }
+  .btn {
+    margin: 50px auto 0;
+  }
 </style>
