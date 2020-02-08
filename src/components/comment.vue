@@ -7,31 +7,31 @@
           <div class="name" v-if="commentItem.user_nickname">{{commentItem.user_nickname}}</div>
           <span class="time">{{commentItem.comment_time|dataFormat}}</span>
         </div>
-        <div @click="reply" class="btnApply">回复</div>
+        <!--<div @click="reply" class="btnApply">回复</div>-->
       </div>
       <!-- 楼层回复 -->
-      <floor
-        :floorItem="commentItem.parent"
-        :parentLength="parentLength"
-        @reply="reply"
-        v-if="commentItem.parent"
-      />
+      <!--<floor-->
+        <!--:floorItem="commentItem.parent"-->
+        <!--:parentLength="parentLength"-->
+        <!--@reply="reply"-->
+        <!--v-if="commentItem.parent"-->
+      <!--/>-->
       <div class="content">{{commentItem.comment_content}}</div>
     </div>
   </div>
 </template>
 
 <script>
-import floor from '@/components/floorComment'
+// import floor from '@/components/floorComment'
 export default {
   props: ['commentItem'],
-  components: {
-    floor
-  },
+  // components: {
+  //   floor
+  // },
   data() {
     return {
       // parentLength: this.countParent(0, this.commentItem)
-      parentLength:3
+      // parentLength:3
     }
   },
   filters: {
@@ -45,24 +45,24 @@ export default {
     }
   },
   methods: {
-    countParent(num, obj) {
-      if (obj.parent) {
-        return this.countParent(num + 1, obj.parent)
-      } else {
-        return num
-      }
-    },
-    reply(data) {
-      // 判断是递归层传递还是自身传递
-      if (data.id) {
-        this.$emit('reply', data)
-      } else {
-        this.$emit('reply', {
-          // 把评论回复id传到父组件
-          id: this.commentItem.id
-        })
-      }
-    }
+    // countParent(num, obj) {
+    //   if (obj.parent) {
+    //     return this.countParent(num + 1, obj.parent)
+    //   } else {
+    //     return num
+    //   }
+    // },
+    // reply(data) {
+    //   // 判断是递归层传递还是自身传递
+    //   if (data.id) {
+    //     this.$emit('reply', data)
+    //   } else {
+    //     this.$emit('reply', {
+    //       // 把评论回复id传到父组件
+    //       id: this.commentItem.id
+    //     })
+    //   }
+    // }
   }
 }
 </script>
@@ -89,10 +89,10 @@ export default {
         color: #888;
       }
     }
-    .btnApply {
-      font-size: 14px;
-      color: #888;
-    }
+    /*.btnApply {*/
+      /*font-size: 14px;*/
+      /*color: #888;*/
+    /*}*/
     .avatar {
       width: 13.889vw;
       height: 13.889vw;
